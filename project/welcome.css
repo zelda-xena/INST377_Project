@@ -1,0 +1,67 @@
+body {
+    background-color: #4B3531;
+    color: white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+header {
+    list-style-type: none;
+    padding: 10px;
+    background-color: #ABA26A;
+}
+
+#header {
+    float: left;
+    width: 85%;
+    font-size: x-large;
+}
+
+ul li {
+    display: inline-block;
+    padding: 10px;
+}
+
+ul li:hover {
+    background-color: #4B3531;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    float: right;
+}
+
+#welcome {
+    width: 60%;
+    float: left;
+}
+
+.sidebar {
+    width: 40%;
+    float: right;
+}
+
+#ingredients {
+    border: 2px solid white;
+    padding: 15px;
+}
+
+#ingredients p {
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+#surprise {
+    border: 2px solid white;
+    padding: 15px;
+    margin-top: 50px;
+}
+
+#surprise p {
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+img {
+    margin-top: 20px;
+}
