@@ -1,0 +1,40 @@
+body {
+    background-color: #4B3531;
+    color: white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+#main-nav {
+    background-color: #ABA26A;
+    text-align: right;
+}
+
+#main-nav a {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+}
+
+#main-nav li {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+}
+
+#main-nav li:hover {
+    background-color: #4B3531;
+}
+
+.sidenav { 
+    border: 2px solid black;
+    float: right;
+    top: 0px;
+    padding: 5px;
+    margin-right: 50px;
+}
+
+.ingredientForm {
+    margin-left: 50px;
+}

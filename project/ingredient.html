@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title> INST377 Ingredients </title>
+        <link rel="stylesheet" href="ingredient.css">
+    </head>
+    <body>
+        <!--global nav-->
+        <nav id="main-nav">
+            <ul>
+                <a href="welcome.html"> <li> Home </li> </a>
+                <a href="about.html"> <li> About </li> </a>
+                <a href="help.html"> <li> Help </li> </a>
+            </ul>
+        </nav>
+        <!--side bar-->
+        <div class="sidenav"> 
+            <div class="sidenav-label">
+                <h3> Instructions </h3>
+                <p> Here's how to generate your special drink!
+                     <ol> 
+                        <li> Choose a flavour that you want or like from the <strong> flavour </strong> drop down </li>
+                        <li> Choose an ingredient that you want or like from the <strong> ingredient </strong> drop down </li>
+                        <li> Choose an alcohol that you want as the base for your drink from the <strong> alcohol </strong> drop down </li>
+                     </ol>
+                     <strong> FYI: </strong>
+                     <br>
+                     You do not need to choose from all three options! You can choose either one or two options as well, just have fun!
+                </p>
+            </div>
+        </div>
+        <!--CREATE JS TO FETCH API INFO-->
+        <div class="ingredientForm" action="result.html">
+            <!--choose aspects of the drink-->
+            <form class="generateForm" action="result.html">
+                <label for="flavour"> Choose a Flavour: </label>
+                <!--drop down of flavours-->
+                <select name="flavour" id="flavour"> 
+                    <option value="one"> One </option>
+                </select>
+                <br><br>
+                <label for="ingredient"> Choose an Ingredient: 
+                    <input list="ingredient" name="drink-ingredient"></label>
+                <!--drop down with text field of ingredients-->
+                <datalist id="ingredient">
+                    <option value="one"></option>
+                    <option value="two"></option>
+                </datalist>
+                <br><br>
+                <label for="alcohol"> Choose an Alcohol: </label>
+                <!--drop down of alcohols-->
+                <select name="alcohol" id="alcohol"> 
+                    <option value="one"> One </option>
+                </select>
+                <br><br>
+                <!--click button goes to results page-->
+                <input type="submit" value="Generate!">
+            </form>
+        </div>
+    </body>
+</html>
