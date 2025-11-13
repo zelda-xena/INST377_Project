@@ -2,10 +2,11 @@
     <head>
         <title>Surprise Me!</title>
         <link rel="stylesheet" href="surprise.css">
+        <script src="surprise.js" defer></script>
     </head>
     <body>
         <header>
-            <h3 id="header"> DRINK GENIE &#129502</h3>
+            <h3 id="header"> DRINK GENIE &#129502;</h3>
             <nav>
                 <ul>
                 <li><a href="welcome.html">Home</a></li>
@@ -14,11 +15,12 @@
                 </ul>
             </nav>
         </header>
-        <h1> SURPRISE ME!
-            <br>
-            <br>
-            <img src="https://c8.alamy.com/comp/2GWXCG5/an-old-genie-came-out-of-a-drink-can-with-a-smiling-face-2GWXCG5.jpg" width="300px" height="300px">
-        </h1>
-        <button type="submit">Click Me!</button>
+        <main>
+            <h1> SURPRISE ME!
+                <br><br>
+                <img src="https://c8.alamy.com/comp/2GWXCG5/an-old-genie-came-out-of-a-drink-can-with-a-smiling-face-2GWXCG5.jpg" width="300px" height="300px">
+            </h1>
+            <button id="surpriseBtn" type="button" onclick="return surpriseMe();">Click Me!</button>
+        </main>
     </body>
 </html>

@@ -16,6 +16,10 @@ header {
     font-size: x-large;
 }
 
+main {
+    text-align: center;
+}
+
 ul li {
     display: inline-block;
     padding: 10px;
@@ -34,4 +38,8 @@ nav a {
 h1 {
     text-align: center;
     margin-top: 75px;
+}
+
+.button {
+    text-align: center;
 }
