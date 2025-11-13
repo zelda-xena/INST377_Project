@@ -4,37 +4,42 @@ body {
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
-#main-nav {
-    background-color: #ABA26A;
-    text-align: right;
-}
-
-#main-nav a {
-    display: inline-block;
-    position: relative;
-    text-decoration: none;
-}
-
-#main-nav li {
-    display: inline-block;
-    position: relative;
-    text-decoration: none;
+header {
+    list-style-type: none;
     padding: 10px;
-    color: white;
+    background-color: #ABA26A;
 }
 
-#main-nav li:hover {
+#header {
+    float: left;
+    width: 85%;
+    font-size: x-large;
+}
+
+ul li {
+    display: inline-block;
+    padding: 10px;
+}
+
+ul li:hover {
     background-color: #4B3531;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    float: right;
 }
 
 .sidenav { 
     border: 2px solid black;
     float: right;
-    top: 0px;
-    padding: 5px;
+    margin-top: 30px;
+    padding: 10px;
     margin-right: 50px;
 }
 
 .ingredientForm {
+    margin-top: 30px;
     margin-left: 50px;
 }
