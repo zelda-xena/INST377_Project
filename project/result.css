@@ -4,18 +4,32 @@ body {
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
-#main-nav {
+header {
+    list-style-type: none;
+    padding: 10px;
     background-color: #ABA26A;
-    text-align: right;
 }
 
-#main-nav a {
+#header {
+    float: left;
+    width: 85%;
+    font-size: x-large;
+}
+
+nav {
+    background-color: #ABA26A;
+    text-align: right;
+    
+}
+
+nav a {
     display: inline-block;
     position: relative;
     text-decoration: none;
+    color: white;
 }
 
-#main-nav li {
+li {
     display: inline-block;
     position: relative;
     text-decoration: none;
@@ -23,8 +37,9 @@ body {
     color: white;
 }
 
-#main-nav li:hover {
+li:hover {
     background-color: #4B3531;
+    
 }
 
 .sidenav {
