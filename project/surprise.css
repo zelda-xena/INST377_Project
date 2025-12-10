@@ -40,6 +40,38 @@ h1 {
     margin-top: 75px;
 }
 
-.button {
-    text-align: center;
+
+#surpriseBtn {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #ABA26A 4px 4px 0 0;
+  color: #ABA26A;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 20px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#surpriseBtn:hover {
+  background-color: #fff;
+}
+
+#surpriseBtn:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 568px) {
+  #surpriseBtn {
+    min-width: 50px;
+    padding: 0 25px;
+  }
 }

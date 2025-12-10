@@ -43,3 +43,38 @@ nav a {
     margin-top: 30px;
     margin-left: 50px;
 }
+
+#button {
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #ABA26A 4px 4px 0 0;
+    color: #ABA26A;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 25px;
+    line-height: 25px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+#button:hover {
+    background-color: #fff;
+  }
+  
+#button:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+  }
+  
+  @media (min-width: 568px) {
+    #button {
+      min-width: 50px;
+      padding: 0 25px;
+    }
+  }
