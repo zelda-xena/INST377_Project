@@ -32,7 +32,8 @@ nav a {
 }
 
 .sidenav { 
-    border: 2px solid black;
+    border: 2px solid white;
+    border-radius: 10px;
     float: right;
     margin-top: 30px;
     padding: 10px;
