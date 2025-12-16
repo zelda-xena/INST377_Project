@@ -40,4 +40,8 @@ function surpriseDrink() {
     });
 }
 
+<<<<<<< HEAD
 document.addEventListener("DOMContentLoaded", surpriseDrink);
+=======
+document.addEventListener("DOMContentLoaded", surpriseDrink);
+>>>>>>> 44f62fdccb418164d778cee294eff4b0d9c8c461
