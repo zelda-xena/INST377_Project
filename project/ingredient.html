@@ -2,6 +2,7 @@
     <head>
         <title> INST377 Ingredients </title>
         <link rel="stylesheet" href="ingredient.css">
+        <script src="ingredient.js" defer></script>
     </head>
     <body>
         <!--global nav-->
@@ -19,44 +20,43 @@
         <div class="sidenav"> 
             <div class="sidenav-label">
                 <h3> Instructions </h3>
-                <p> Here's how to generate your special drink!
+                <p> Here's how to generate your special drink:
                      <ol> 
-                        <li> Choose a flavour that you want or like from the <strong> flavour </strong> drop down </li>
-                        <li> Choose an ingredient that you want or like from the <strong> ingredient </strong> drop down </li>
-                        <li> Choose an alcohol that you want as the base for your drink from the <strong> alcohol </strong> drop down </li>
+                        <li> You can choose up to 3 ingredients for your drink! </li>
+                        <li> To generate your drink, you will only need to choose <strong> one </strong> ingredient. 
+                            If you would like to, you can choose one or two more ingredients. </li>
+                        <li> Once you have chosen your ingredient(s), click the <strong> Generate! </strong> button
+                            and your drink will be generated. </li>
                      </ol>
-                     <strong> FYI: </strong>
-                     <br>
-                     You do not need to choose from all three options! You can choose either one or two options as well, just have fun!
                 </p>
             </div>
         </div>
-        <!--CREATE JS TO FETCH API INFO-->
-        <div class="ingredientForm" action="result.html">
+        <div class="ingredientForm">
             <!--choose aspects of the drink-->
-            <form class="generateForm" action="result.html">
-                <label for="flavour"> Choose a Flavour: </label>
-                <!--drop down of flavours-->
-                <select name="flavour" id="flavour"> 
-                    <option value="one"> One </option>
-                </select>
-                <br><br>
-                <label for="ingredient"> Choose an Ingredient: 
-                    <input list="ingredient" name="drink-ingredient"></label>
+            <form id="generateForm" action="result.html">
+                <label for="ingredient"> Choose Ingredient #1: 
+                    <input list="ingredient1" name="drink-ingredient" required></label>
                 <!--drop down with text field of ingredients-->
-                <datalist id="ingredient">
-                    <option value="one"></option>
-                    <option value="two"></option>
+                <datalist id="ingredient1">
+
                 </datalist>
                 <br><br>
-                <label for="alcohol"> Choose an Alcohol: </label>
-                <!--drop down of alcohols-->
-                <select name="alcohol" id="alcohol"> 
-                    <option value="one"> One </option>
-                </select>
+                <label for="ingredient"> Choose Ingredient #2: 
+                    <input list="ingredient2" name="drink-ingredient"></label>
+                <!--drop down with text field of ingredients-->
+                <datalist id="ingredient2">
+
+                </datalist>
+                <br><br>
+                <label for="ingredient"> Choose Ingredient #3: 
+                    <input list="ingredient3" name="drink-ingredient"></label>
+                <!--drop down with text field of ingredients-->
+                <datalist id="ingredient3">
+
+                </datalist>
                 <br><br>
                 <!--click button goes to results page-->
-                <button id="button" type="button">Generate!</button>
+                <button id="button" type="submit"> Generate! </button>
             </form>
         </div>
     </body>
