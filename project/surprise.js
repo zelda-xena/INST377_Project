@@ -27,21 +27,12 @@ function surpriseDrink() {
 
             // checks if there are both ingredients and measurements from the api
             if(ingredient) {
-                if(measure) {
-                    ingredientList += measure + " " + ingredient + ", ";
-                }
-                else {
-                    ingredientList += ingredient + ", ";
-                }
+                ingredientList += (measure ? measure + " " : "") + ingredient + ", ";
             }
-
-            cocktailIngredients.textContent = ingredientList.trim();
+            // removes trailing comma and space
+            cocktailIngredients.textContent = ingredientList.slice(0, -2);
         }
     });
 }
 
-<<<<<<< HEAD
 document.addEventListener("DOMContentLoaded", surpriseDrink);
-=======
-document.addEventListener("DOMContentLoaded", surpriseDrink);
->>>>>>> 44f62fdccb418164d778cee294eff4b0d9c8c461

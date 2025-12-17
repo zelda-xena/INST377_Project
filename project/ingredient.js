@@ -20,4 +20,26 @@ async function populateIngredients() {
     });
 }
 
+function handleFormSubmission(event) {
+    event.preventDefault();
+
+    // pulls the input from the ingredient form
+    const inputs = document.querySelectorAll("input[name='drink-ingredient']")
+    const ingredients = Array.from(inputs)
+                        .map(input => input.value.trim()) // gets ingredient values from datalist
+                        .filter(value => value != ""); // removes any empty values from array
+
+    if(ingredients.length > 0) {
+        // save all chosen ingredients to an array
+        localStorage.setItem("chosenCocktailIngredients", JSON.stringify(ingredients));
+        // navigate to the results page
+        window.location.href = "result.html";
+    }
+}
+
 window.onload = populateIngredients;
+
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector("#generateForm");
+    form.addEventListener("submit", handleFormSubmission);
+});

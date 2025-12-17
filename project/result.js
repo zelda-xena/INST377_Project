@@ -1,21 +1,13 @@
 function loadCocktail() {
-    // pulls the input from the ingredient form
-    const ingredient1 = document.querySelector("input[list='ingredient1']").value.trim();
-    const ingredient2 = document.querySelector("input[list='ingredient2']").value.trim();
-    const ingredient3 = document.querySelector("input[list='ingredient3']").value.trim();
-
-    const chosenIngredient = ingredient1 || ingredient2 || ingredient3;
+    const storedIngredient = localStorage.getItem("chosenCocktailIngredients");
+    const ingredients = JSON.parse(storedIngredient);
+    const chosenIngredient = ingredients[0];
     
     // use encondeURIcomponent so strings with spaces can still be valid
     // filter for a list of cocktails by chosen ingredients from form
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${encodeURIComponent(chosenIngredient)}`)
     .then((result) => result.json())
     .then((data) => {
-        if(!data.drinks) {
-            alert("No cocktails found.");
-            return;
-        }
-
         // picks one cocktail from the filtered list
         const randomDrink = data.drinks[Math.floor(Math.random() * data.drinks.length)];
 
@@ -39,7 +31,7 @@ function loadCocktail() {
         cocktailInstructions.textContent = drink.strInstructions;
         
         // update ingredients list
-        let ingredientList = "";
+        let ingredientArray = [];
 
         // loop goes through all 15 ingredients and measures in the api
         for(let i = 1; i <= 15; i++) {
@@ -48,26 +40,12 @@ function loadCocktail() {
 
             // checks if there are both ingredients and measurements from the api
             if(ingredient) {
-                if(measure) {
-                    ingredientList += measure + " " + ingredient + ", ";
-                }
-                else {
-                    ingredientList += ingredient + ", ";
-                }
+                ingredientArray.push(measure ? `${measure.trim()} ${ingredient}` : ingredient);
             }
         }
-        cocktailIngredients.textContent = ingredientList.trim();
+        cocktailIngredients.textContent = ingredientArray.join(", ");
+        localStorage.removeItem("chosenCocktailIngredients")
     });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.querySelector("#generateForm");
-    form.addEventListener("submit", (event) => {
-        event.preventDefault();
-        loadCocktail();
-    });
-<<<<<<< HEAD
-});
-=======
-});
->>>>>>> 44f62fdccb418164d778cee294eff4b0d9c8c461
+document.addEventListener("DOMContentLoaded", loadCocktail);
