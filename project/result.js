@@ -48,4 +48,14 @@ function loadCocktail() {
     });
 }
 
+<<<<<<< HEAD
 document.addEventListener("DOMContentLoaded", loadCocktail);
+=======
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector("#generateForm");
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        loadCocktail();
+    });
+});
+>>>>>>> c44b08842d7db9d075a4ec93304a24f2dd9f1641
