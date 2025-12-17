@@ -66,8 +66,4 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault();
         loadCocktail();
     });
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> 44f62fdccb418164d778cee294eff4b0d9c8c461
