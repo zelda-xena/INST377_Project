@@ -1,3 +1,25 @@
+async function addCocktail() {
+    const cocktailName = document.getElementById("cocktail-name").textContent;
+    const cocktailImg = document.getElementById("cocktail-img").src;
+    const cocktailInstructions = document.getElementById("p-1").textContent;
+    const cocktailIngredients = document.getElementById("p-2").textContent;
+
+    const data = await fetch(`/drinks`, {
+    method: 'POST',
+    body: JSON.stringify({
+      drink_name: cocktailName,
+      drink_img: cocktailImg,
+      drink_instructions: cocktailInstructions,
+      drink_ingredients: cocktailIngredients
+    }),
+    headers: {
+      'content-type': 'application/json',
+    },
+  }).then((result) => result.json());
+
+  console.log("Inserted into Supabase: ", data);
+}
+
 function surpriseDrink() {
     const cocktailName = document.getElementById("cocktail-name");
     const cocktailImg = document.getElementById("cocktail-img");
