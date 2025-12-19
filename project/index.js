@@ -4,11 +4,11 @@ const supabaseClient = require('@supabase/supabase-js');
 const dotenv = require('dotenv');
 
 const app = express();
-const port = 5500;
+const port = 3000;
 dotenv.config();
 
 app.use(bodyParser.json());
-app.use(express.static(__dirname));
+//app.use(express.static(__dirname));
 
 // Initialize Supabase Client
 const supabaseUrl = process.env.SUPABASE_URL;
@@ -66,7 +66,8 @@ app.post('/drinks', async (req, res) => {
       drink_instructions,
       drink_ingredients
     }])
-    .select();
+    .select()
+    .single();
 
     if (error) {
       console.error(`Error: `, error.message);
@@ -75,6 +76,8 @@ app.post('/drinks', async (req, res) => {
 
     res.json(data);
   });
+
+app.use(express.static(__dirname));
 
 app.listen(port, () => {
   console.log('App is available on port:', port);
