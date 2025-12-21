@@ -58,3 +58,35 @@ Response Example:
   }
 ]
 ```
+
+POST /drinks
+Description:
+Adds a new drink to the database.
+Response Example:
+```
+{
+  "drink_name": "Margarita",
+  "drink_img": "https://...",
+  "drink_instructions": "Mix and serve",
+  "drink_ingredients": "Tequila, Lime Juice, Triple Sec"
+}
+```
+
+### 6. Testing
+You can test the website by performing one of these actions:
+- Generating random drinks
+- Searching drinks by ingredient
+- Viewing drink details
+- Saving drinks to the database
+- Verifying saved drinks in Supabase
+
+### 7. Limitations and Known Bugs
+- No user authentication or accounts
+- Have not tested on mobile application
+- Minimal error handling for failed network requests
+
+### 8. Future Development Roadmap
+- Add user authentication and profiles
+- Improve mobile responsiveness
+- Add animations and UI transitions
+- Allow users to rate and favorite drinks
