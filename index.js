@@ -79,8 +79,8 @@ app.post('/drinks', async (req, res) => {
 
 app.use(express.static(__dirname));
 
-// app.listen(port, () => {
-//   console.log('App is available on port:', port);
-// });
+app.listen(port, () => {
+  console.log('App is available on port:', port);
+});
 
 module.exports = app;
