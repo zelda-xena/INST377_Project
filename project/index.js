@@ -4,11 +4,11 @@ const supabaseClient = require('@supabase/supabase-js');
 const dotenv = require('dotenv');
 
 const app = express();
-const port = 5500;
+const port = process.env.PORT || 3000;
 dotenv.config();
 
 app.use(bodyParser.json());
-app.use(express.static(__dirname));
+app.use(express.static(__dirname + '/project'));
 
 // Initialize Supabase Client
 const supabaseUrl = process.env.SUPABASE_URL;
@@ -17,22 +17,22 @@ const supabase = supabaseClient.createClient(supabaseUrl, supabaseKey);
 
 // root page
 app.get('/', (req, res) => {
-  res.sendFile('welcome.html', { root: __dirname + '/project'});
+  res.sendFile('project/welcome.html', { root: __dirname });
 });
 
 // ingredient page
 app.get('/ingredient', (req, res) => {
-  res.sendFile('ingredient.html', { root: __dirname + '/project'});
+  res.sendFile('project/ingredient.html', { root: __dirname });
 });
 
 // result + ingredient page
 app.get('/result', (req, res) => {
-  res.sendFile('result.html', { root: __dirname + '/project'});
+  res.sendFile('project/result.html', { root: __dirname });
 });
 
 // result + surprise page
 app.get('/result-surprise', (req, res) => {
-  res.sendFile('result_surprise.html', { root: __dirname + '/project'});
+  res.sendFile('project/result_surprise.html', { root: __dirname });
 });
 
 // GET drinks
@@ -73,9 +73,11 @@ app.post('/drinks', async (req, res) => {
       return res.status(500).json({error : error.message});
     }
 
-    res.json(data);
+    res.send(data);
   });
 
 app.listen(port, () => {
   console.log('App is available on port:', port);
 });
+
+module.exports = app;

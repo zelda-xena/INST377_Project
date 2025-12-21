@@ -7,7 +7,7 @@ This document is intended for future developers who may take over the Drink Geni
 
 ## Technology Stack
 - Front-End: HTML, CSS, JavaScript
-- Back-End: Node.js, Express
+- Back-End: Node.js
 - Database: Supabase
 - External API: TheCocktailDB
 - Deployment: Vercel
