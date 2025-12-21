@@ -31,7 +31,7 @@ npm install
 Create a .env file in the root directory with the following values:
 SUPABASE_URL=your_supabase_url
 SUPABASE_KEY=your_supabase_anon_key
-PORT=5500
+PORT=3000
 
 ### 4. Running the Application
 Start the server:
@@ -39,7 +39,7 @@ Start the server:
 node index.js
 ```
 The server will then run locally at:
-http://localhost:5500
+http://localhost:3000
 
 
 ### 5. API's Information
