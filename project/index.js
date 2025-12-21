@@ -66,7 +66,8 @@ app.post('/drinks', async (req, res) => {
       drink_instructions,
       drink_ingredients
     }])
-    .select();
+    .select()
+    .single();
 
     if (error) {
       console.error(`Error: `, error.message);
@@ -75,6 +76,8 @@ app.post('/drinks', async (req, res) => {
 
     res.send(data);
   });
+
+app.use(express.static(__dirname));
 
 app.listen(port, () => {
   console.log('App is available on port:', port);
