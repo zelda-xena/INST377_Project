@@ -12,7 +12,7 @@ app.use(express.static(__dirname + '/project'));
 
 // Initialize Supabase Client
 const supabaseUrl = process.env.SUPABASE_URL;
-const supabaseKey = process.env.SUPABASE_KEY;
+const supabaseKey = process.env.SUPABASE_ANON_KEY;
 const supabase = supabaseClient.createClient(supabaseUrl, supabaseKey);
 
 // root page
@@ -79,8 +79,8 @@ app.post('/drinks', async (req, res) => {
 
 app.use(express.static(__dirname));
 
-app.listen(port, () => {
-  console.log('App is available on port:', port);
-});
+// app.listen(port, () => {
+//   console.log('App is available on port:', port);
+// });
 
 module.exports = app;
