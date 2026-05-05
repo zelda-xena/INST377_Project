@@ -3,6 +3,8 @@
 
 Description: Drink Genie is a web-based cocktail generator that allows users to discover drinks in a fun and interactive way. Users can generate a random cocktail, explore drink ingredients, and view detailed drink information including images, ingredients, and instructions. The project uses a public cocktail API and demonstrates full-stack web development concepts.
 
+Website: drinkgenies.vercel.app
+
 ## Target Browsers
 This application is designed to work on all modern desktop and mobile browsers, including:
 - Google Chrome
